@@ -212,19 +212,19 @@ ALTER TABLE `usuario`
 -- AUTO_INCREMENT de la tabla `ambientes`
 --
 ALTER TABLE `ambientes`
-  MODIFY `no` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=56;
+  MODIFY `no` int(20) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `re_drop`
 --
 ALTER TABLE `re_drop`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=57;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- AUTO_INCREMENT de la tabla `usuario`
 --
 ALTER TABLE `usuario`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT;
 
 --
 -- Restricciones para tablas volcadas
