@@ -152,7 +152,7 @@ CREATE TABLE `re_drop` (
 
 CREATE TABLE `usuario` (
   `id` int(11) NOT NULL,
-  `fecha` datetime NOT NULL,
+  `fecha` TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
   `clave` varchar(10) NOT NULL,
   `correo` varchar(30) NOT NULL,
   `nombre_usuario` varchar(20) NOT NULL
