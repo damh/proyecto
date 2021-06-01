@@ -1,0 +1,55 @@
+body
+{
+    
+
+    background-image: url("../img/sena.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+	background-attachment: fixed;
+	overflow: scroll;
+}   
+
+#clase1
+{
+	text-align: center;
+	position: center;
+	left: center;
+	color: black;
+	
+}
+
+#clase2
+{
+	font-size: 140%;
+	position: relative;
+	top: 15%;  
+	text-align: center;
+	
+	left: center;
+	color: black;
+	font-family:"Arial";
+}
+
+#clase3{
+	
+	
+	top: 7cm; 
+	text-align: center;
+	position: center;
+	left: center;
+}
+
+#clase4{
+	font-size: 150%;
+	position: relative;
+	left: 49%;
+	
+	top: 10%; 
+}
+
+#clase5{
+	font-size: 145%;
+	position: relative;
+	top: 50%;
+	left: 45%; 
+}
