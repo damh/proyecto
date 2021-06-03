@@ -15,7 +15,6 @@ class usuario extends conex
         $sql= " insert into usuario (fecha, clave, correo, nombre_usuario) values ( now(),'$clave', '$correo','$nombre_usuario')";
         $resultado = $conexion->query($sql);
         
-        mensajes::m_amb($conexion);
     }
 }
 
