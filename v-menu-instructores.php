@@ -1,71 +1,79 @@
 <html>
 <head>
-<title>
-</title>
-<style>
-
-body{
-background-color: #EAEDED;
-}
-
-table{
-border:2px solid #F8C471;
-padding:100px;
-margin:0 auto;
-background: #F4D03F ;
-font-family:Arial, Helvetica, sans-serif;
-width: 50%;
-	height: 300px;
-}
-
-/*.boton{
-vertical-align: middle;
-}*/
-</style>
+<title></title>
 
 </head>
+
+
 <body>
-	<h1>
-<div id = centrar>
-         <h1>TypKey</h1>
-         <hr>
-      </div>
 
 
-<form action="c-menu.php">
-<table >
+            
+      <div id = centrar>
+            <h1>TypKey</h1>
+            <hr>
+       </div>
 
-<td><label for="imp"><h1>Agregar Instructor</label>
-<td><h1><input type="button" onclick="history.back()" class="btn btn-primary btn-block" name="volver atrás" value="volver"><h1></td>
-<tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr>
-<td><label for="imp"><h1>Ficha:</label></td>
-<td><input type="text" name="imp" id="imp">  </td>
+       <br>
+
+            <form action="r_instructor.php" method="POST">
+           
+            <table> 
+
+            <td><label for="imp"><h1>Agregar Instructor</label></h1></td>
+            <td><input type="button" onclick="history.back()"class="btn btn-primary btn-block" name="volver atrás" value="volver"></td>
+            <tr>
+
+            <td><label for="imp"><h1>CC:</label></td></h1>
+            <td><input type="number" name="CC" id="imp"></td></tr>
+            <tr>
+
+            <td><label for="imp"><h1>Nombres y Apellidos:</label></td></h1>
+            <td><input type="text" name="nombre" id="imp"></td></tr>
+            <tr>
+
+            <td><label for="imp"><h1>Ambiente:</label></td></h1>
+            <td>
+
+            <select name="ambiente">
+        <?php
+            //se realiza la conexion con la base de datos
+            include('class/conexion.php');
+            $conexion = conex::conectar();
+            $sql = "select no, cede, nom_aula from ambientes";
+            //echo $sql;
+            $resultado = $conexion->query($sql);
+            //se crea l alista de los ambientes
+            while($fila = mysqli_fetch_array($resultado) )
+            {
+                $ambiente = $fila[ 'no'];
+                $ambiente .= "  ";
+                $ambiente .= $fila[ 'cede'];
+                $ambiente .= "  ";
+                $ambiente .= $fila[ 'nom_aula'];
+                echo "<option values =' $ambiente'>  $ambiente </option>";
+            }
+            ?>
+            </select>
+
+            </td>
+
+            <tr>
+
+            <td><input type="submit" class="btn btn-primary btn-block" name="Enviar" value="Enviar"></td>
+            <td></td>
 </tr>
-<tr>
-<td><label for="imp"><h1>Numero de documento:</label></td>
-<td><input type="text" name="imp" id="imp"></td>
-</tr>
-<tr>&nbsp;</tr>
-<tr>&nbsp;</tr>
-<tr>
 
-<tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr>
-<td><label for="imp"><h1>Numero de ambiente:</label></td>
-<td><input type="text" name="imp" id="imp"></td>
-</tr>
-<tr>&nbsp;</tr>
-<tr>&nbsp;</tr>
-<tr>
-     
-                             
+            
+      
+   
+
+            </form>
+
+            </table>
+  
+          
          
-<h1>
-<td  style="margin: 0 auto;"><input type="submit" class="btn btn-primary btn-block" name="Enviar" value="Enviar"></td>
-
-</tr>
-
-</table>
-</form>
-
+           
 </body>
 </html>

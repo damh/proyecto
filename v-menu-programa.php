@@ -1,71 +1,82 @@
 <html>
+
 <head>
-<title>
-</title>
-<style>
-
-body{
-background-color: #EAEDED;
-}
-
-table{
-border:2px solid #F8C471;
-padding:100px;
-margin:0 auto;
-background: #F4D03F ;
-font-family:Arial, Helvetica, sans-serif;
-width: 50%;
-	height: 300px;
-}
-
-/*.boton{
-vertical-align: middle;
-}*/
-</style>
+<title></title>
 
 </head>
+
+
 <body>
-	<h1>
+	
 <div id = centrar>
          <h1>TypKey</h1>
          <hr>
       </div>
 
+<br>
 
-<form action="c-menu.php">
+<form action="r_programas.php" method= "POST">
+
 <table >
 
-<td><label for="imp"><h1>Agregar Programas</label>
-<td><h1><input type="button" onclick="history.back()" class="btn btn-primary btn-block" name="volver atrás" value="volver"><h1></td>
-<tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr>
-<td><label for="imp"><h1>Ficha:</label></td>
-<td><input type="text" name="imp" id="imp">  </td>
-</tr>
-<tr>
-<td><label for="imp"><h1>Nombre de programa:</label></td>
-<td><input type="text" name="imp" id="imp"></td>
-</tr>
-<tr>&nbsp;</tr>
-<tr>&nbsp;</tr>
+<td><label for="imp"><h1>Agregar Programas</label></h1></td>
+<td><input type="button" onclick="history.back()" class="btn btn-primary btn-block" name="volver atrás" value="volver"></td>
 <tr>
 
-<tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr><tr>
-<td><label for="imp"><h1>Numero de documento:</label></td>
-<td><input type="text" name="imp" id="imp"></td>
-</tr>
-<tr>&nbsp;</tr>
-<tr>&nbsp;</tr>
+<td><label for="imp"><h1>Ficha:</label></td></h1>
+<td><input type="text" name="ficha" id="imp"></td></tr>
 <tr>
+
+
+<td><label for="imp"><h1>Nombre de programa:</label></td></h1>
+<td><input type="text" name="nombre" id="imp"></td></tr>
+<tr>
+
+
+<td><label for="imp"><h1>instructor:</label></td></h1>
+<td>
+
+<select name="instructor">
+
+        <?php
+            //se realiza la conexion con la base de datos
+            include('class/conexion.php');
+            $conexion = conex::conectar();
+            $sql = "select no_documento, nom_instructor from instructores";
+            //echo $sql;
+            $resultado = $conexion->query($sql);
+            //se crea l alista de los ambientes
+            while($fila = mysqli_fetch_array($resultado) )
+            {
+                $instructor = $fila[ 'no_documento'];
+                $instructor .= "  ";
+                $instructor .= $fila[ 'nom_instructor'];
+                echo "<option values =' $instructor'>  $instructor </option>";
+ }
+            ?>
+            </select>
+
+            </td>
+            
+            <tr>
+                                
+
+        <td  style="margin: 0 auto;"><input type="submit" class="btn btn-primary btn-block" name="Enviar" value="Enviar"></td>
+        <td></td>
+        
+    </tr>
+
+
+            
+      
+
+
+        </form>
+
+        </table>
+
+      
      
-                             
-         
-<h1>
-<td  style="margin: 0 auto;"><input type="submit" class="btn btn-primary btn-block" name="Enviar" value="Enviar"></td>
-
-</tr>
-
-</table>
-</form>
-
+       
 </body>
 </html>
