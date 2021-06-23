@@ -1,0 +1,100 @@
+body{
+
+    font-family:Tahoma;
+ 
+    background-image: url("../img/sena.jpg");
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-attachment: fixed;
+    overflow: scroll;
+}
+
+.caja2{
+    width: 300px;
+    vertical-align: middle;
+    white-space: nowrap;
+    position: relative; left: 25%;
+    
+  }
+
+
+
+  .caja2 input#buscar{
+    width: 30px;
+    height: 30px;
+    background: #ffffff;
+    border: none;
+    font-size: 20pt;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    float: left;
+    color: #ffffff;
+    padding-left: 35px;
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+    color: rgb(255, 115, 50);
+   
+    -webkit-transition: width .55s ease;
+    -moz-transition: width .55s ease;
+    -ms-transition: width .55s ease;
+    -o-transition: width .55s ease;
+    transition: width .55s ease;
+
+  }
+
+
+  .caja2 input#buscar::-webkit-input-placeholder {
+    color: #ffffff;
+ }
+
+
+ .caja2  input#buscar:-moz-placeholder { /* Firefox 18- */
+    color: #ffffff;  
+ }
+
+
+ .caja2 input#buscarh::-moz-placeholder {  /* Firefox 19+ */
+    color: #ffffff;  
+ }
+
+ .caja2 input#buscar:-ms-input-placeholder {  
+    color: #ffffff;  
+ }
+ .caja2 .icon{
+    position: absolute;
+    top: 50%;
+    margin-left: 17px;
+    margin-top: 17px;
+    z-index: 1;
+    color: #ffffff;
+  }
+ .caja2 input#buscar:focus, .container-2 input#buscar:active{
+    outline:none;
+    width: 300px;
+  }
+ .caja2:hover input#buscar{
+    width: 300px;
+    }
+ .caja2:hover .icon{
+    color: #ffffff;
+ }
+
+ .caja1{
+
+    color: coral;
+    font-family: cursive;
+    font-size: 1cm; 
+    position: relative; left: 450px;
+ }
+ .caja3{
+    color: coral;
+    font-family: cursive;  
+    font-size: 3cm;  
+    position: relative; left: 450px;
+   
+ }
+ .table{
+     font-family: cursive;
+     border: coral 1px;
+     position: relative; left: 25%;
+ }
